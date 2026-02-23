@@ -15,7 +15,7 @@ import numpy as np
 # Load API
 # -------------------------------
 load_dotenv()
-genai.configure(api_key=os.getenv("GEMINI_API_KEY",input("Enter Gemini API Key:))
+genai.configure(api_key=os.getenv("GEMINI_API_KEY",input("Enter Gemini API Key:"))
 model = genai.GenerativeModel("gemini-1.5-pro")
 
 # -------------------------------
