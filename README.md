@@ -29,44 +29,10 @@ pkg update -y
 pkg install python ffmpeg git -y
 pip install yt-dlp google-generativeai scenedetect[opencv] tqdm python-dotenv faiss-cpu
 mkdir -p $PREFIX/bin
-curl -L -o ytai.py https://your-repo-link/ytai.py
+curl -L -o ytai.py https://github.com/Media-CLis/YTAI-CLi/raw/refs/heads/main/cli/ytai.py
 chmod +x ytai.py
 mv ytai.py $PREFIX/bin/ytai
 echo "YTAI installed. Run with: ytai download --url <playlist_url>"
-```
-
----
-## Folder Structure 
-```
-ytai_lab/
- ├── cli/
- │    └── ytai.py                 # Main CLI
- ├── db/
- │    └── ytai.db                  # SQLite DB
- ├── data/
- │    └── playlists/               # videos, clips, thumbnails
- ├── backend/
- │    ├── main.py                  # FastAPI server
- │    └── embeddings.py            # FAISS vector search
- ├── frontend/
- │    └── react_app/               # React dashboard scaffold
- ├── scripts/
- │    └── scheduler.py             # APScheduler jobs
- ├── Dockerfile                     # Full containerization
- └── .env                           # GEMINI_API_KEY
-```
-
-
-## React Frontend (Scaffold)
-```
-frontend/react_app/
- ├── package.json
- ├── src/
- │    ├── App.jsx      # fetch /videos, /clips and display
- │    └── components/
- │         ├── VideoList.jsx
- │         ├── ClipPlayer.jsx
- │         └── SearchBar.jsx
 ```
 
 ## 🎯 Features (aka Why You’ll Love This Insane Tool)
@@ -98,8 +64,7 @@ frontend/react_app/
 ## 🏗 Installation
 
 ### Termux one-liner:
-```bash
-curl -sL https://your-repo-link/install_ytai.sh | bash
+curl https://github.com/Media-CLis/YTAI-CLi/raw/refs/heads/main/scripts/install_ytai.sh | bash
 ytai download --url <playlist_url>
 ```
 ## ⚡ CLI Commands
@@ -148,10 +113,41 @@ ytai download --url <playlist_url>
 - Add audio-based scene detection  
 - Generate composite highlight reels  
 - Auto-update playlists on a schedule  
-- Optional: make the React dashboard flashy enough to distract coworkers  
+- Optional: make the React dashboard flashy enough to distract coworkers 
 
 ---
+## Folder Structure 
+```
+ytai_lab/
+ ├── cli/
+ │    └── ytai.py                 # Main CLI
+ ├── db/
+ │    └── ytai.db                  # SQLite DB
+ ├── data/
+ │    └── playlists/               # videos, clips, thumbnails
+ ├── backend/
+ │    ├── main.py                  # FastAPI server
+ │    └── embeddings.py            # FAISS vector search
+ ├── frontend/
+ │    └── react_app/               # React dashboard scaffold
+ ├── scripts/
+ │    └── scheduler.py             # APScheduler jobs
+ ├── Dockerfile                     # Full containerization
+ └── .env                           # GEMINI_API_KEY
+```
 
+
+## React Frontend (Scaffold)
+```
+frontend/react_app/
+ ├── package.json
+ ├── src/
+ │    ├── App.jsx      # fetch /videos, /clips and display
+ │    └── components/
+ │         ├── VideoList.jsx
+ │         ├── ClipPlayer.jsx
+ │         └── SearchBar.jsx
+```
 ## 📝 License
 
 MIT – Because sharing is caring, even if you’re stealing scenes from cat videos.
