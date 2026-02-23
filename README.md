@@ -41,6 +41,19 @@ ytai_lab/
  └── .env                           # GEMINI_API_KEY
 ```
 
+
+## React Frontend (Scaffold)
+```
+frontend/react_app/
+ ├── package.json
+ ├── src/
+ │    ├── App.jsx      # fetch /videos, /clips and display
+ │    └── components/
+ │         ├── VideoList.jsx
+ │         ├── ClipPlayer.jsx
+ │         └── SearchBar.jsx
+```
+
 ## 🎯 Features (aka Why You’ll Love This Insane Tool)
 
 - **1080p Downloader**: Only the finest pixels, none of that potato-resolution nonsense.  
