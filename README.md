@@ -51,7 +51,10 @@ It downloads, chops, analyzes, scores, and even gives scene-by-scene viral advic
 ## 🏗 Installation
 
 ### Termux one-liner:
-curl https://github.com/Media-CLis/YTAI-CLi/raw/refs/heads/main/scripts/install_ytai.sh | bash
+
+
+```bash
+curl -sL https://github.com/Media-CLis/YTAI-CLi/raw/refs/heads/main/scripts/install_ytai.sh | bash
 ytai download --url <playlist_url>
 ```
 ## ⚡ CLI Commands
