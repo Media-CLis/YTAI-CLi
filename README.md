@@ -21,6 +21,25 @@ YTAI is basically **your personal AI-powered YouTube ninja**, built for develope
 It downloads, chops, analyzes, scores, and even gives scene-by-scene viral advice — because who doesn’t want Gemini AI to roast or praise their favorite content creators?
 
 ---
+## Folder Structure 
+```
+ytai_lab/
+ ├── cli/
+ │    └── ytai.py                 # Main CLI
+ ├── db/
+ │    └── ytai.db                  # SQLite DB
+ ├── data/
+ │    └── playlists/               # videos, clips, thumbnails
+ ├── backend/
+ │    ├── main.py                  # FastAPI server
+ │    └── embeddings.py            # FAISS vector search
+ ├── frontend/
+ │    └── react_app/               # React dashboard scaffold
+ ├── scripts/
+ │    └── scheduler.py             # APScheduler jobs
+ ├── Dockerfile                     # Full containerization
+ └── .env                           # GEMINI_API_KEY
+```
 
 ## 🎯 Features (aka Why You’ll Love This Insane Tool)
 
